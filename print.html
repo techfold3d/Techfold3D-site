@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3D Print Request | TechFold3D</title>
+<meta name="description" content="Request a quote for a 3D print. Multi-color printing in PLA, PETG, ABS, ASA, PC and TPU.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">TechFold3D</a>
+  <nav aria-label="Main"><ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="drafting.html">Drafting</a></li>
+    <li><a href="print.html" aria-current="page">3D Print</a></li>
+    <li><a href="repair.html">Repair</a></li>
+    <li><a href="about.html">About &amp; Contact</a></li>
+  </ul></nav>
+</div></header>
+
+<div class="pagehead"><div class="wrap">
+  <span class="label">Request</span>
+  <h1>3D print request</h1>
+  <p>Get a quote for printing your model.</p>
+</div></div>
+
+<section class="block"><div class="wrap two">
+  <div>
+    <span class="label">How printing works</span>
+    <h2>Send details, get a quote.</h2>
+    <p>Whether you already have a 3D model or need one designed first, send us the details and we'll prepare a quote for the modelling and printing.</p>
+    <p>Prints can use up to five colors per model. Several materials are available, and more can be sourced on request. See the <a href="about.html#materials">materials guide</a> if you're not sure what to pick.</p>
+    <p class="notice">We'll reach out if we need more information, and quote once everything is clear.</p>
+    <p style="margin-top:20px">Not sure about something on the form, or just want to talk through your options first? Email us directly at <a href="mailto:techfold3d@gmail.com">techfold3d@gmail.com</a>.</p>
+  </div>
+  <form data-form="print" data-subject="3D print request" novalidate>
+    <div class="row">
+      <div class="field"><label for="name">Name</label><input type="text" id="name" name="Name" required autocomplete="name"></div>
+      <div class="field"><label for="email">Email</label><input type="email" id="email" name="Email" required autocomplete="email"></div>
+    </div>
+    <div class="field"><label for="phone">Phone <span class="opt">(optional)</span></label><input type="tel" id="phone" name="Phone" autocomplete="tel"></div>
+    <div class="field"><label for="have">Do you have a 3D model?</label>
+      <select id="have" name="Model status" required>
+        <option value="">Choose one</option>
+        <option>Yes, I have a file</option>
+        <option>No, I need it designed</option>
+        <option>I have a sketch or idea</option>
+      </select></div>
+    <div class="field"><label for="file">3D model file <span class="opt">(optional)</span></label>
+      <input type="file" id="file" name="File">
+      <p class="hint">Any file type, up to 10 MB (STL, 3MF, STEP, etc.). For several files, put them in a ZIP.</p></div>
+    <div class="row">
+      <div class="field"><label for="mat">Material</label>
+        <select id="mat" name="Material" required>
+          <option value="">Choose one</option>
+          <option>PLA</option><option>PETG</option><option>ABS</option>
+          <option>ABS, vapor smoothed</option><option>ASA</option><option>PC</option><option>TPU</option>
+          <option>Other (explain below)</option><option>Not sure, recommend one</option>
+        </select></div>
+      <div class="field"><label for="colors">What colors would you like?</label>
+        <input type="text" id="colors" name="Colors" required placeholder="e.g. black body, white lettering"></div>
+    </div>
+    <div class="row">
+      <div class="field"><label for="qty">Quantity</label><input type="number" id="qty" name="Quantity" min="1" value="1" required></div>
+      <div class="field"><label for="when">Needed by <span class="opt">(optional)</span></label><input type="text" id="when" name="Needed by"></div>
+    </div>
+    <div class="field"><label for="notes">Details</label>
+      <textarea id="notes" name="Details" required placeholder="What it is for, size, colors for each part, strength or outdoor needs, anything else we should know."></textarea></div>
+    <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+    <button class="btn" type="submit">Send request</button>
+    <div class="status" role="status"></div>
+  </form>
+</div></section>
+
+<footer class="bottom"><div class="wrap">
+  <div>&copy; <span id="yr">2026</span> TechFold3D &middot; SW Airdrie, Alberta</div>
+  <div><a href="mailto:techfold3d@gmail.com">techfold3d@gmail.com</a></div>
+</div></footer>
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

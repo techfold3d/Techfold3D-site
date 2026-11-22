@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drafting Request | TechFold3D</title>
+<meta name="description" content="Request a custom 3D model. Fusion 360 drafting for mechanical and decorative parts.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">TechFold3D</a>
+  <nav aria-label="Main"><ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="drafting.html" aria-current="page">Drafting</a></li>
+    <li><a href="print.html">3D Print</a></li>
+    <li><a href="repair.html">Repair</a></li>
+    <li><a href="about.html">About &amp; Contact</a></li>
+  </ul></nav>
+</div></header>
+
+<div class="pagehead"><div class="wrap">
+  <span class="label">Request</span>
+  <h1>Drafting request</h1>
+  <p>Get a custom 3D model designed for your project.</p>
+</div></div>
+
+<section class="block"><div class="wrap two">
+  <div>
+    <span class="label">What we can draft</span>
+    <h2>Designed in Fusion 360.</h2>
+    <p>We mainly use Fusion 360 to design mechanical parts and decorative pieces. Choose the finished design only, or a printed product, including models with more than one color.</p>
+    <span class="label" style="display:block;margin-top:28px">Pricing</span>
+    <p style="margin-top:8px">Drafting is billed hourly. Once we have clear dimensions and requirements, we'll send a detailed quote. If you'd prefer a flat price, send us a design and we'll give a rough estimate.</p>
+    <p class="notice">Fill out the form with as much detail as you can. We'll reach out if we need more information, and quote once everything is clear.</p>
+    <span class="label" style="display:block;margin-top:28px">Helpful to include</span>
+    <ul class="plain" style="margin-top:8px">
+      <li>Measurements and tolerances</li>
+      <li>What the part does or fits onto</li>
+      <li>Photos or sketches (link to them)</li>
+      <li>Colors wanted</li>
+    </ul>
+    <p style="margin-top:24px">Not sure about something on the form, or just want to talk through your options first? Email us directly at <a href="mailto:techfold3d@gmail.com">techfold3d@gmail.com</a>.</p>
+  </div>
+  <form data-form="drafting" data-subject="Drafting request" novalidate>
+    <div class="row">
+      <div class="field"><label for="name">Name</label><input type="text" id="name" name="Name" required autocomplete="name"></div>
+      <div class="field"><label for="email">Email</label><input type="email" id="email" name="Email" required autocomplete="email"></div>
+    </div>
+    <div class="row">
+      <div class="field"><label for="phone">Phone <span class="opt">(optional)</span></label><input type="tel" id="phone" name="Phone" autocomplete="tel"></div>
+      <div class="field"><label for="title">Project name</label><input type="text" id="title" name="Project" required></div>
+    </div>
+    <div class="field"><label for="desc">Describe what you need drafted</label>
+      <textarea id="desc" name="Description" required></textarea></div>
+    <div class="field"><label for="dims">Dimensions <span class="opt">(optional)</span></label>
+      <input type="text" id="dims" name="Dimensions" placeholder="e.g. 120 x 60 x 30 mm">
+      <p class="hint">Include units. Rough sizes are fine if you aren't sure.</p></div>
+    <div class="field"><label for="deliver">What would you like to receive?</label>
+      <select id="deliver" name="Deliverable" required data-controls="print-details" data-reveal-on="Printed part only|Digital file and printed part">
+        <option value="">Choose one</option>
+        <option>Digital file only</option>
+        <option>Printed part only</option>
+        <option>Digital file and printed part</option>
+        <option>Not sure yet</option>
+      </select></div>
+
+    <fieldset class="reveal" id="print-details" hidden disabled>
+      <legend>Printing details</legend>
+      <div class="row">
+        <div class="field"><label for="mat">Material</label>
+          <select id="mat" name="Material" required>
+            <option value="">Choose one</option>
+            <option>PLA</option><option>PETG</option><option>ABS</option>
+            <option>ABS, vapor smoothed</option><option>ASA</option><option>PC</option><option>TPU</option>
+            <option>Other (explain below)</option><option>Not sure, recommend one</option>
+          </select></div>
+        <div class="field"><label for="colors">What colors would you like?</label>
+          <input type="text" id="colors" name="Colors" required placeholder="e.g. black body, white lettering"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="qty">Quantity</label><input type="number" id="qty" name="Quantity" min="1" value="1" required></div>
+        <div class="field"><label for="needed">Print needed by <span class="opt">(optional)</span></label><input type="text" id="needed" name="Print needed by"></div>
+      </div>
+      <div class="field"><label for="pnotes">Printing notes <span class="opt">(optional)</span></label>
+        <textarea id="pnotes" name="Printing notes" placeholder="What it will be used for, strength or outdoor needs, finish, anything else we should know about the print."></textarea></div>
+    </fieldset>
+
+    <div class="field"><label for="ref">Link to photos, sketches or reference files <span class="opt">(optional)</span></label>
+      <input type="url" id="ref" name="Reference link" placeholder="Google Drive, Dropbox, etc.">
+      <p class="hint">Make sure the link is shared so we can open it.</p></div>
+    <div class="field"><label for="when">Deadline or budget <span class="opt">(optional)</span></label><input type="text" id="when" name="Deadline / budget"></div>
+    <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+    <button class="btn" type="submit">Send request</button>
+    <div class="status" role="status"></div>
+  </form>
+</div></section>
+
+<footer class="bottom"><div class="wrap">
+  <div>&copy; <span id="yr">2026</span> TechFold3D &middot; SW Airdrie, Alberta</div>
+  <div><a href="mailto:techfold3d@gmail.com">techfold3d@gmail.com</a></div>
+</div></footer>
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

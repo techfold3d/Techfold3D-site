@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3D Printer Repair | TechFold3D</title>
+<meta name="description" content="FDM 3D printer repair, calibration and upgrades. Drop-off in SW Airdrie, Alberta.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">TechFold3D</a>
+  <nav aria-label="Main"><ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="drafting.html">Drafting</a></li>
+    <li><a href="print.html">3D Print</a></li>
+    <li><a href="repair.html" aria-current="page">Repair</a></li>
+    <li><a href="about.html">About &amp; Contact</a></li>
+  </ul></nav>
+</div></header>
+
+<div class="pagehead"><div class="wrap">
+  <span class="label">Request</span>
+  <h1>Printer repair</h1>
+  <p>Get your 3D printer printing reliably again.</p>
+</div></div>
+
+<section class="block"><div class="wrap two">
+  <div>
+    <span class="label">What we repair</span>
+    <h2>All FDM printers.</h2>
+    <p>We repair all FDM (Fused Deposition Modeling) 3D printers, from calibration problems to full rebuilds, including troubleshooting, part replacement and upgrades.</p>
+    <p>We've worked on Ender, Prusa, Bambu, Snapmaker, Flashforge, MakerBot and Delta printers, and many others.</p>
+    <span class="label" style="display:block;margin-top:28px">Pricing</span>
+    <p style="margin-top:8px">Pricing is set after an initial assessment of the problem. If replacement parts are needed, their cost is added to the total.</p>
+    <span class="label" style="display:block;margin-top:28px">Drop-off and pickup</span>
+    <p style="margin-top:8px">Repairs are by drop-off in SW Airdrie, Alberta. We can also pick up your printer for you, which carries an extra charge that depends on your location. If you ship a printer or parts yourself, we can't be responsible for loss or damage in transit.</p>
+    <p style="margin-top:24px">Not sure about something on the form, or just want to talk through your options first? Email us directly at <a href="mailto:techfold3d@gmail.com">techfold3d@gmail.com</a>.</p>
+  </div>
+  <form data-form="repair" data-subject="Printer repair request" novalidate>
+    <div class="row">
+      <div class="field"><label for="name">Name</label><input type="text" id="name" name="Name" required autocomplete="name"></div>
+      <div class="field"><label for="email">Email</label><input type="email" id="email" name="Email" required autocomplete="email"></div>
+    </div>
+    <div class="field"><label for="phone">Phone <span class="opt">(optional)</span></label><input type="tel" id="phone" name="Phone" autocomplete="tel"></div>
+    <div class="row">
+      <div class="field"><label for="brand">Printer brand</label>
+        <select id="brand" name="Brand" required>
+          <option value="">Choose one</option>
+          <option>Bambu Lab</option><option>Creality / Ender</option><option>Prusa</option>
+          <option>Snapmaker</option><option>Other</option>
+        </select></div>
+      <div class="field"><label for="model">Model</label><input type="text" id="model" name="Model" required placeholder="e.g. Ender 3 V2"></div>
+    </div>
+    <div class="field"><label for="type">Type of problem</label>
+      <select id="type" name="Problem type" required>
+        <option value="">Choose one</option>
+        <option>Won't power on</option><option>Print quality issues</option><option>Clogged or damaged hotend</option>
+        <option>Bed leveling or calibration</option><option>Motion or mechanical problem</option>
+        <option>Upgrade or rebuild</option><option>Other</option><option>Not sure</option>
+      </select></div>
+    <div class="field"><label for="issue">What is happening?</label>
+      <textarea id="issue" name="Issue description" required placeholder="Symptoms, error messages, when it started, anything you've already tried."></textarea></div>
+    <div class="field"><label for="delivery">How will you get it to us?</label>
+      <select id="delivery" name="Drop-off method" required>
+        <option value="">Choose one</option><option>Drop off in SW Airdrie</option><option>Pick up from me (extra charge applies)</option><option>Not sure yet</option>
+      </select></div>
+    <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+    <button class="btn" type="submit">Send request</button>
+    <div class="status" role="status"></div>
+  </form>
+</div></section>
+
+<footer class="bottom"><div class="wrap">
+  <div>&copy; <span id="yr">2026</span> TechFold3D &middot; SW Airdrie, Alberta</div>
+  <div><a href="mailto:techfold3d@gmail.com">techfold3d@gmail.com</a></div>
+</div></footer>
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
